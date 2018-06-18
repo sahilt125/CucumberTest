@@ -1,0 +1,15 @@
+{
+  "server": "hub-cloud.browserstack.com",
+  "user": "davidmcadams1",
+  "key": "zZZm2KgsngiYx89sDyHV",
+
+  "capabilities": {
+    "build": "jbehave-browserstack",
+    "name": "single_test",
+    "browserstack.debug": true
+  },
+
+  "environments": [{
+    "browser": "chrome"
+  }]
+}
