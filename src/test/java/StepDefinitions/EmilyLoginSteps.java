@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -26,7 +27,7 @@ public class EmilyLoginSteps {
 	  private String DEFAULT_URL = "https://us-emily-test.azurewebsites.net/";
 	WebDriver driver;
 
-	   @Given("^User is on Emily Website on device '(.*?)' with OS version '(.*?)'$")
+	/*   @Given("^User is on Emily Website on device \"([^\"]*)\" with OS version \"{[^\"]*)\"$")
 	    public void user_is_on_Emily_App(String Device,String OSVersion) throws Throwable {
 	  
 		   caps.setCapability("browser", "Firefox");
@@ -39,22 +40,39 @@ public class EmilyLoginSteps {
 		    caps.setCapability("browserstack.networkLogs", true);
 		   URL = "https://" + userName + ":" + accessKey + "@hub-cloud.browserstack.com/wd/hub";
 		   driver = new RemoteWebDriver(new URL(URL), caps);
-	    }
-
+	    }*/
+	
+	@Given("^User is on Emily Website on device \"([^\"]*)\" with OS version \"([^\"]*)\"$")
+	public void user_is_on_Emily_Website_on_device_with_OS_version(String Device, String OSVersion) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	   System.out.println("Hey");
+	   caps.setCapability("browser", "Firefox");
+		 caps.setCapability("device", Device);
+		    caps.setCapability("realMobile", "true");
+		    caps.setCapability("os_version", OSVersion);
+		    caps.setCapability("browserstack.local", "false");
+		    caps.setCapability("browserstack.debug", true);
+		    caps.setCapability("browserstack.console", "errors");
+		    caps.setCapability("browserstack.networkLogs", true);
+		   URL = "https://" + userName + ":" + accessKey + "@hub-cloud.browserstack.com/wd/hub";
+		   driver = new RemoteWebDriver(new URL(URL), caps);
+		   //driver.quit();
+	}
+	
 	    @When("^User clicks on Sign in button$")
 	    public void user_clicks_on_Sign_in_button() throws Throwable {
 	    	 System.out.println("Login button click");
 	    	 	driver.get(DEFAULT_URL);
 	    	 	 System.out.println(driver.getTitle());
-	    	 	 driver.quit();
+	    	 //	 driver.quit();
 	    }
 	    
-	    @When("^User enters Username '(.*?)'$")
+	    @When("^User enters Username \\\"([^\\\"]*)\\\"$")
 	    public void user_enters_username(String UserName){
 	  
 	    }
 	    
-	    @When("^User enters Password '(.*?)'$")
+	    @When("^User enters Password \\\"([^\\\"]*)\\\"$")
 	    public void user_enters_password(String Password){
 	    	System.out.println("Enter password");
 	    	
@@ -71,7 +89,7 @@ public class EmilyLoginSteps {
 	    public void user_is_displayed_login_screen() throws Throwable {
 	        // Write code here that turns the phrase above into concrete actions
 	        System.out.println("Successfull Login!!");
-	        //driver.quit();
+	        driver.quit();
 	    }
 	    
 	    
