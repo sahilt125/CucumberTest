@@ -45,7 +45,7 @@ public class EmilyLoginSteps {
 	@Given("^User is on Emily Website on device \"([^\"]*)\" with OS version \"([^\"]*)\"$")
 	public void user_is_on_Emily_Website_on_device_with_OS_version(String Device, String OSVersion) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-	   System.out.println("Hey");
+	   System.out.println("Opening browser");
 	   caps.setCapability("browser", "Firefox");
 		 caps.setCapability("device", Device);
 		    caps.setCapability("realMobile", "true");
