@@ -2,6 +2,7 @@ package StepDefinitions;
 
 import java.net.URL;
 
+import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -87,7 +88,6 @@ public class EmilyLoginSteps {
 	    
 	    @Then("^User is successfully logged in$")
 	    public void user_is_displayed_login_screen() throws Throwable {
-	        // Write code here that turns the phrase above into concrete actions
 	        System.out.println("Successfull Login!!");
 	        driver.quit();
 	    }

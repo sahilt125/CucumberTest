@@ -1,4 +1,4 @@
-package SeleniumWebProject.SeleniumWebProject;
+package StepDefinitions;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -15,8 +15,8 @@ import java.io.File;
 @CucumberOptions(
         features = "src/test/java/features",
         glue = "StepDefinitions",
-        plugin = {"com.cucumber.listener.ExtentCucumberFormatter:output/report.html"} 
-
+        plugin = {"com.cucumber.listener.ExtentCucumberFormatter:output/report.html"}, 
+    tags= {}
         )
 public class RunTest {
 
