@@ -1,2 +1,2 @@
-StepDefinitions\EmilyLoginSteps.class
-StepDefinitions\RunTest.class
+StepDefinitions/EmilyLoginSteps.class
+StepDefinitions/RunTest.class
