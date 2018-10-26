@@ -39,7 +39,6 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
-			<li class='waves-effect'><a href='#!' onclick="configureView(-1)" view='testrunner-logs-view'><i class='material-icons'>note</i></a></li>
 		</ul>
 
 		<!-- report name -->
@@ -52,7 +51,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Aug 31, 2018 02:59:54 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Oct 26, 2018 08:03:41 PM</span>
 				</a>
 			</li>
 			<li>
@@ -158,7 +157,7 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>6</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>4</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -177,13 +176,13 @@
 				
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Emily login</span>
-						<span class='test-time'>Aug 31, 2018 02:59:54 PM</span>
+						<span class='test-name'>login feature</span>
+						<span class='test-time'>Oct 26, 2018 08:03:41 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='scenariooutline node' test-id='2' status='pass'>
-	<span class='duration right label'>0h 1m 3s+678ms</span>
+	<span class='duration right label'>0h 0m 36s+968ms</span>
 	<div class='desc'>
 		<b>ScenarioOutline</b>
 		<span class="desc-text">login with username and password</span>
@@ -196,27 +195,19 @@
 			<span class="bdd-step-name">login with username and password</span>
 			
 				<ul class='steps'>
-					<li test-id='4' class='node given pass' status='pass'><b>Given</b>
-						<span class="bdd-step-name">Given User is on Emily Website on device "iPhone 8" with OS version "11.0"</span>
+					<li test-id='4' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User enters Username "test_username"</span>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='5' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When User clicks on Sign in button</span>
+					<li test-id='5' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User enters Password "test_Password"</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='6' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And User enters Username "Kanchan@weareloup.com"</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='7' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And User enters Password "Kanpassword"</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='8' class='node and pass' status='pass'><b>And</b>
 						<span class="bdd-step-name">And User clicks on Login button</span>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='9' class='node then pass' status='pass'><b>Then</b>
+					<li test-id='7' class='node then pass' status='pass'><b>Then</b>
 						<span class="bdd-step-name">Then User is successfully logged in</span>
 							<div class='pre'>passed</div>
 					</li>
@@ -273,60 +264,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>6</div>
+					<div class='panel-lead'>4</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Aug 31, 2018 02:59:54 PM</div>
+					<div class='panel-lead'>Oct 26, 2018 08:03:41 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Aug 31, 2018 03:00:58 PM</div>
+			 		<div class='panel-lead'>Oct 26, 2018 08:04:19 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>63,857ms</div>
-				</div>
-			</div>
-			<div class='col s4'>
-				<div class='card-panel dashboard-environment'>
-					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
-					
-					<table>
-						<tr>
-							<th>Name</th>
-							<th>Value</th>
-						</tr>
-							<tr>
-								<td>user</td>
-								<td>Glasdon</td>
-							</tr>
-							<tr>
-								<td>os</td>
-								<td>iOS</td>
-							</tr>
-					</table>
+					<div class='panel-lead'>38,620ms</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 <!-- dashboard view -->
-<div id='testrunner-logs-view' class='view hide'>
-	<div class='card-panel transparent np-v'>
-		<h5>TestRunner Logs</h5>
-		
-		<div class='card-panel'>
-				Sample test runner output message
-		</div>
-	</div>
-</div>
 <!-- testrunner-logs view -->
 		</div>
 		<!-- container -->
@@ -350,7 +312,7 @@
 				infoChild: 0,
 				exceptionsChild: 0,
 				
-				passGrandChild: 6,
+				passGrandChild: 4,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
